@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * @file
+ * The Remove unwanted routes
+ *
+ * Removes the /node , /user/%/edit, /user/password routed from your drupal. Useful when using external authentication. 
+ * 
+ */
+ 
+/**
+ * Implementation of hook_menu_alter().
+ */
+function d7_remove_unwanted_routes(&$items) {
+	//global $user;
+	//drupal_set_message ("REMOVE RON :%user ");
+    unset($items['node']);
+    unset($items['user/password']);
+    unset($items['user/%user/edit']);
+    
+}

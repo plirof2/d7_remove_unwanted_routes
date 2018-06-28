@@ -1,0 +1,8 @@
+name = d7_remove_unwanted_routes
+description = "Remove unwanted routes : /node , /user/password , /user/*/edit  (original idea taken from disable_ron from DrupalAid.com)"
+core = 7.x
+package = d7_extra
+
+version = "7.x"
+core = "7.x"
+project = "d7_remove_unwanted_routes"
