@@ -11,7 +11,7 @@
 /**
  * Implementation of hook_menu_alter().
  */
-function d7_remove_unwanted_routes(&$items) {
+function d7_remove_unwanted_routes_menu_alter(&$items) {
 	//global $user;
 	//drupal_set_message ("REMOVE RON :%user ");
     unset($items['node']);
