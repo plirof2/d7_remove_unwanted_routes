@@ -1,0 +1,38 @@
+<?php
+
+/**
+ * @file
+ * 
+ *
+ * /node/5 -> f/5
+ * 
+ */
+ 
+/**
+ * Implements hook_menu().
+ */
+function d7_fake_node_route_menu()
+{
+    $items = array();
+
+    $items['fake_node_route_menu'] = array(
+    'path' => 'f/%',
+    'title' => 'fake_node_route',
+    'page callback' => 'd7_fake_node_route_redirect',
+    'page arguments' => array(1),
+    //'access callback' => 'user_is_anonymous', 
+    'type' => MENU_SUGGESTED_ITEM,
+  );
+
+    return $items;
+}
+
+
+/**
+ * 
+ */
+function d7_fake_node_route_redirect($node_id) {
+
+	drupal_goto("node/$node_id");
+	return "ERROR f-$node_id. You shouldn't see this message" ;
+}
